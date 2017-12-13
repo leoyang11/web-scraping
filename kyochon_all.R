@@ -1,5 +1,5 @@
 library("rvest")
-library("stringr")
+library("stringr") 
 
 name1 <- NULL
 addr1 <- NULL
