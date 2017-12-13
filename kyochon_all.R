@@ -6,7 +6,7 @@ addr1 <- NULL
 
 
 #### 1. seoul ####
-for (j1 in 1:25) {
+for (j1 in 1:25) {  # 서울에 속한 구 25개
   sido1 <- 1 
   sido2 <- j1
   urls <- sprintf("http://www.kyochon.com/shop/domestic.asp?sido1=%1.0f&sido2=%1.0f",sido1,sido2)
@@ -398,7 +398,7 @@ for (j17 in 1:2) {
 
 #### summary ####
 
-# no result check
+# no result check (name 없이 address만 추가되는 문제 해결)
 noresult <- grep("검색결과가 없습니다.",addr1)
 noresult
 addr1 <- addr1[-noresult,]
@@ -406,7 +406,6 @@ addr1 <- addr1[-noresult,]
 # build data frame
 kyochon_list <- data.frame(name1, addr1)
 colnames(kyochon_list) <- c('name', 'address_old', 'address_new', 'phone')
-kyochon_list
 
 # save data
 write.csv(kyochon_list,"kyochon.csv")
