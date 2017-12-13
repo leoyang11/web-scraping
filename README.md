@@ -4,6 +4,6 @@
 
 1.교촌치킨  kyochon_all.R
 <br>
-2.새마을금고  saemaeul_all.R
+2.새마을금고  saemaeul_all.R 
 
 
